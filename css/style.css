@@ -1,0 +1,147 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, 
+body {
+    height: 100%;
+}
+body {
+    background: black;
+}
+
+.red {
+    color:red;
+    background: linen;
+}
+.big {
+    font-size: 46px;
+}
+
+.small {
+    font-size:12px;
+}
+
+.container {
+    min-height: 200px;
+    background-color: chartreuse;
+}
+
+.card{
+    border: 1px solid pink;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card img{
+    width: 90%;
+
+}
+
+.circle{
+    margin: 50px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: blue;
+    border: 2px solid darkblue;
+    
+    animation: anim 1500ms infinite alternate;
+    animation-play-state: paused;
+}
+
+.run{
+    animation-play-state: running;
+
+}
+
+@keyframes anim {
+    0%{
+        transform: translate(0) scale(1);
+    }
+    20%{
+        transform: translateY(-50px);
+        transform: translateX(500px);
+    }
+    40%{
+        transform: translateY(50px);
+    }
+    60%{
+        transform: translateY(-50px);
+        transform: translateX(500px);
+    }
+    80%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateX(500px);
+    }
+}
+
+
+
+form, .tasks{
+    font-family: 'Consolas';
+
+}
+
+form{
+    margin: 50px;
+}
+
+form input{
+    border: 5px solid white;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#task_title{
+    min-width: 45%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 26px;
+}
+
+#task_info{
+    height: 100px;
+    min-width: 29%;
+}
+
+#add_task{
+    min-width: 15%;
+    height: 100px;
+}
+
+.tasks{
+    border: 5px solid white;
+    border-radius: 10px;
+    min-height: 100px;
+    min-width: 80%;
+    margin: 50px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+.tasks ul{
+    margin: 10px;
+    border: 1px solid yellow;
+    height: 100%;
+}
+
+.tasks p{
+    margin: 5px;
+
+}

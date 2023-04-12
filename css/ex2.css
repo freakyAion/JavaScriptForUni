@@ -1,0 +1,72 @@
+*, *::after, *::before 
+{ margin: 0; padding: 0; box-sizing: border-box; }
+html, body 
+{ height: 100%; }
+body 
+{ background: #141414; color: #bebebe; }
+
+.paragraph{
+    margin: 50px;
+    padding: 10px;
+
+    border: 2px #bebebe solid;
+    background-color: #313131;
+    color: #dfdfdf;
+    border-radius: 10px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+
+}
+
+.tooltip{
+    font-style: italic;
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip:hover{
+    color: #fff;
+
+}
+
+.tooltip::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 200px;
+    max-width: 400px;
+    opacity: 0;
+
+    padding: 10px;
+
+    border: 2px #bebebe solid;
+    background-color: #575757;
+    color: #dfdfdf;
+    border-radius: 10px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+
+    pointer-events: none;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.tooltip-animated::after{
+    transform: translateY(100%);
+    opacity: 1;
+
+}
+
+.tooltip-animated0::after{
+    opacity: 1;
+
+}
+
+.tooltip-animated1::after{
+    transform: rotate(360deg);
+    opacity: 1;
+    
+}
