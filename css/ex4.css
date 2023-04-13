@@ -53,7 +53,8 @@ section{
 }
 
 .accordeon_item__visible{
-    padding: 10px 0 10px 0;
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
     opacity: 1;
 
 }

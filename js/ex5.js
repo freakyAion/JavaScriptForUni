@@ -10,10 +10,13 @@ function openTab(evt){
     const button = evt.currentTarget;
     const day = button.getAttribute("data-day");
 
-    tabContents.classList.remove("tabcontent_active");
-    tabContents.classList.remove("tabcontent_active");
+    tabLinks.forEach(link => {
+        link.classList.remove("tablinks_active");
+    });
+    tabContents.forEach(object =>{
+        object.classList.remove("tabcontent_active");
+    });
 
     document.querySelector(`#${day}`).classList.add("tabcontent_active");
     button.classList.add("tablinks_active");
-
 }
