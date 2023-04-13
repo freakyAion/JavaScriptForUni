@@ -1,0 +1,144 @@
+*, *::after, *::before { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body { background: #141414; color: #bebebe; }
+.colours{
+    color: #141414; color: #313131; color: #575757; color: #aaaaaa; color: #bebebe; color: #dfdfdf;
+    --far_background: #141414; --close_background: #313131; --active_background: #575757; --bright_white: #aaaaaa; --text_active: #bebebe; --text_regular: #dfdfdf;
+}
+
+.content{
+    margin: 20px;
+    border: 2px #bebebe solid;
+
+}
+
+.tabs{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tablinks{
+    background-color: #141414;
+
+    color: #dfdfdf;
+    border: 1px #141414 solid;
+    background-color: #313131;
+
+    padding: 10px;
+
+    font-size: 16px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    outline: none;
+    cursor: pointer;
+    width: 25%;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tablinks span{
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    transition: color 0.5s ease;
+    font-size: 25px;
+
+}
+
+.wrapper{
+    background-color: var(--close_background);
+    position: relative;
+    top: 0;
+    opacity: 1;
+    padding: 40px 60px;
+    overflow: hidden;
+
+    background-color: #313131;
+
+}
+
+.tabcontent{
+    display: none;
+    min-height: 180px;
+
+}
+
+.tabcontent h3{
+    margin: 0%;
+    padding: 0;
+    font-size: 24px;
+    /*opacity: 0.1;*/
+    animation: left 1s ease;
+
+}
+
+.tabcontent p{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: var(--text_regular);
+    line-height: 28px;
+    font-weight: 100;
+    animation: right 0.6s ease;
+
+}
+
+.tablinks_active{
+    position: relative;
+    border-bottom: none;
+    border-top: none;
+    transition: color 0.3s ease;
+}
+
+.tablinks_active span{
+    color: var(--far_background);
+
+}
+
+.tablinks_active:hover span, .tablinks_active:focus span{
+    /*color: #141414;*/
+}
+
+.tablinks_active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0040;
+    transform-origin: center top;
+    transform: scaleY(0.03);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.tablinks_active:hover::before{
+    transform: scaleY(1);
+
+}
+
+.tabcontent_active{
+    display: block;
+
+}
+
+.left_animation{
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+
+}
+
+.right_animation{
+    transform: translateX(100%);
+    transition: transform 1s ease;
+
+}
