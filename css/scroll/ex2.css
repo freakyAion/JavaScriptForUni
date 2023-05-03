@@ -1,0 +1,50 @@
+@import url(../base.css);
+@import url(../scroll/ex1.css);
+
+section{
+    min-height: 500px;
+
+}
+
+.header{
+    max-height: 200px;
+    width: 100%;
+
+    display: flex;
+
+    background-color: #313131;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header h1{
+    margin-top: 15px;
+
+}
+
+.footer{
+    max-height: 200px;
+    width: 100%;
+}
+
+.header___fix{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    animation: scroll 250ms ease-in-out alternate-reverse    ;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateY(-100%);
+
+    }
+    100%{
+        transform: translateY(0%);
+
+    }
+}

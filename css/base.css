@@ -1,0 +1,10 @@
+*, *::after, *::before 
+{ margin: 0; padding: 0; box-sizing: border-box; }
+html, body 
+{ height: 100%; }
+body 
+{ background: #141414; color: #bebebe; }
+.colours{
+    color: #141414; color: #313131; color: #575757; color: #aaaaaa; color: #bebebe; color: #dfdfdf;
+    --far_background: #141414; --close_background: #313131; --active_background: #575757; --bright_white: #aaaaaa; --text_active: #bebebe; --text_regular: #dfdfdf;
+}
