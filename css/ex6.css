@@ -1,0 +1,85 @@
+*, *::after, *::before 
+{ margin: 0; padding: 0; box-sizing: border-box; }
+html, body 
+{ height: 100%; }
+body 
+{ background: #141414; color: #bebebe; }
+.colours{
+    color: #141414; color: #313131; color: #575757; color: #aaaaaa; color: #bebebe; color: #dfdfdf;
+    --far_background: #141414; --close_background: #313131; --active_background: #575757; --bright_white: #aaaaaa; --text_active: #bebebe; --text_regular: #dfdfdf;
+}
+
+.slider{
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+
+}
+
+.slider_items{
+    display: flex;
+    /*animation: slider_animation 10s linear infinite alternate;*/
+    transition: transform 250ms ease-in-out;
+}
+
+.slider_items:hover{
+    animation-play-state: paused;
+
+}
+
+.slider_item{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slide_text{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    backdrop-filter:blur(2px);
+}
+
+.slide_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.wrapper{
+    margin: 100px;
+    position: relative;
+}
+
+.wrapper button{
+    padding: 10px;
+
+    border: 2px #bebebe solid;
+    background-color: #313131;
+    color: #dfdfdf;
+    border-radius: 10px;  
+
+    text-align: center;
+
+}
+
+.wrapper button:hover{
+    background-color: #575757;
+}
+
+/*@keyframes slider_animation {
+    from{
+        transform: translateX(0);
+
+    }
+    to{
+        transform: translateX(-2400px);
+
+    }
+}*/
